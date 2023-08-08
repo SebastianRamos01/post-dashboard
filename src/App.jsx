@@ -1,9 +1,11 @@
-
+import Dashboard from "./components/Dashboard"
+import Navbar from "./components/Navbar"
 
 function App() {
   return (
     <>
-      <h1 className="text-red-400 underline">Holaa Mundo</h1>
+      <Dashboard></Dashboard>
+      <Navbar></Navbar>
     </>
   )
 }
