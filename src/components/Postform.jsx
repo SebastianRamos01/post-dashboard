@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useFetch } from '../useFetch';
+import { redirect, useNavigate } from 'react-router-dom';
 
 export default function Postform() {
 
@@ -9,6 +10,7 @@ export default function Postform() {
         body: '',
         featured: false
     })
+    const goToList = useNavigate()
 
     function handleData(e) {
         const newData = {...data}
@@ -33,6 +35,7 @@ export default function Postform() {
         })
             .then((res) => res.json())
             .then((data) => {console.log(data)})
+            .finally(() => goToList('/posts'))
             .catch((err) => { console.log(err);})
     }
 
