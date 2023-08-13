@@ -1,15 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useFetch } from '../useFetch'
 
 export default function Dashboard() {
 
     const { data } = useFetch('http://localhost:3001/posts')
-    const [index, setIndex] = useState()
     const lastPost = data?.slice(-1)
+    const lengthPosts = data?.length
+    const featuredPosts = data?.filter(post => 
+        post.featured === true)
+    const lengthFeatured = featuredPosts?.length
 
   return (
-    <div className='w-[600px] h-[300px] rounded-sm m-auto border-2 border-black text-center font-josefin'>
-        <h1 className=' bg-transparent underline p-1 text-[20px]'>
+    <div className='w-[600px] p-4 my-[70px] m-auto bg-[#020617] text-[#f1f5f9] text-center font-josefin'>
+        <h1 className='underline p-1 text-[25px]'>
             Dashboard
         </h1>
         <section className='flex flex-wrap justify-around gap-6 bg-transparent'>
@@ -28,7 +31,7 @@ export default function Dashboard() {
                     Number of Posts:
                 </h1>
                 <div className=' bg-transparent'>
-                    12
+                    {lengthPosts}
                 </div>
             </div>
             <div className='w-[50%] bg-transparent p-2'>
@@ -36,7 +39,7 @@ export default function Dashboard() {
                     Number of Featured Posts:
                 </h1>
                 <div className=' bg-transparent'>
-                    4
+                    {lengthFeatured}
                 </div>
             </div>
         </section>
