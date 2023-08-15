@@ -7,7 +7,7 @@ export default function Listpost() {
   console.log(data);
 
   return (
-    <div className='bg-[#020617] text-[#f1f5f9] w-[600px] p-4 m-auto font-josefin'>
+    <div className='border-2 border-[#020617] text-[#020617] w-[600px] p-4 m-auto font-josefin'>
       <div className='bg-transparent text-center underline text-lg'>
         Soy Listpost
       </div>

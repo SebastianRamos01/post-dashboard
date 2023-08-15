@@ -11,7 +11,7 @@ export default function Dashboard() {
     const lengthFeatured = featuredPosts?.length
 
   return (
-    <div className='w-[600px] p-4 my-[70px] m-auto bg-[#020617] text-[#f1f5f9] text-center font-josefin'>
+    <div className='w-[600px] p-4 my-[70px] m-auto border-2 border-[#020617] text-[#020617] text-center font-josefin'>
         <h1 className='underline p-1 text-[25px]'>
             Dashboard
         </h1>
