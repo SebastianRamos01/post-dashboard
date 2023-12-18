@@ -11,38 +11,40 @@ export default function Dashboard() {
     const lengthFeatured = featuredPosts?.length
 
   return (
-    <div className='w-[600px] p-4 my-[70px] m-auto border-2 border-[#020617] text-[#020617] text-center font-josefin'>
-        <h1 className='underline p-1 text-[25px]'>
-            Dashboard
-        </h1>
-        <section className='flex flex-wrap justify-around gap-6 bg-transparent'>
-                <div className='w-[50%] bg-transparent p-2'>
-                    <div className='bg-transparent'>
-                        Last Post:
+    <div className='bg-gradient-to-br from-black to-violet-950 h-screen font-amatic flex'>
+        <div className='w-[600px] h-[400px] p-4 my-10 m-auto bg-black bg-opacity-30 text-white text-center font-josefin'>
+            <h1 className='p-1 text-[34px]'>
+                In Universe Dashboard
+            </h1>
+            <section className='flex flex-wrap justify-around gap-6'>
+                    <div className='w-[50%] p-2 text-xl'>
+                        <div className=''>
+                            Last Post:
+                        </div>
+                        {lastPost?.map((post) => (
+                            <p key={post.id} className=''>
+                                {post.title}
+                            </p>
+                        ))}
                     </div>
-                    {lastPost?.map((post) => (
-                        <p key={post.id} className='bg-transparent'>
-                            {post.title}
-                        </p>
-                    ))}
+                <div className='w-[50%] p-2 text-xl'>
+                    <h1 className=''>
+                        Number of Posts:
+                    </h1>
+                    <div className=''>
+                        {lengthPosts}
+                    </div>
                 </div>
-            <div className='w-[50%] bg-transparent p-2'>
-                <h1 className=' bg-transparent'>
-                    Number of Posts:
-                </h1>
-                <div className=' bg-transparent'>
-                    {lengthPosts}
+                <div className='w-[50%] p-2 text-xl'>
+                    <h1 className=''>
+                        Number of Featured Posts:
+                    </h1>
+                    <div className=''>
+                        {lengthFeatured}
+                    </div>
                 </div>
-            </div>
-            <div className='w-[50%] bg-transparent p-2'>
-                <h1 className=' bg-transparent'>
-                    Number of Featured Posts:
-                </h1>
-                <div className=' bg-transparent'>
-                    {lengthFeatured}
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
   )
 }

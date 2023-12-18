@@ -3,9 +3,11 @@ import Postform from './Postform'
 
 export default function Addpost() {
   return (
-    <div className='flex flex-col items-center border-2 border-black font-josefin w-[600px] m-auto'>
-        <p className='bg-transparent py-2 underline'>Add Post</p>
-        <Postform></Postform>
+    <div className='bg-gradient-to-br from-black to-violet-950 font-amatic flex'>
+      <div className='flex flex-col items-center text-white w-[600px] m-auto my-8 bg-black bg-opacity-30'>
+          <p className='py-2 text-[34px]'>Add Post</p>
+          <Postform></Postform>
+      </div>
     </div>
   )
 }

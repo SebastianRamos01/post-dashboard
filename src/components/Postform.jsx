@@ -39,24 +39,24 @@ export default function Postform() {
     }
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)} className='flex flex-col text-center items-center shadow-md w-[400px] my-2 rounded-sm'>
-        <label htmlFor="" className='my-1 bg-transparent'>
+    <form onSubmit={(e) => handleSubmit(e)} className='flex flex-col text-center items-center shadow-md w-[400px] my-2 text-xl'>
+        <label htmlFor="" className='my-1'>
             Title <br />
-            <input onChange={(e) => handleData(e)} id='title' value={data.title} type="text" required className='outline-none border border-black p-1'/>
+            <input onChange={(e) => handleData(e)} id='title' value={data.title} type="text" required className='outline-none border-b text-white bg-transparent border-white p-1'/>
         </label>
-        <label htmlFor="" className='my-1 bg-transparent'>
+        <label htmlFor="" className='my-1'>
             Author <br />
-            <input onChange={(e) => handleData(e)} id='author' value={data.author} type="text" required className='outline-none border border-black p-1'/>
+            <input onChange={(e) => handleData(e)} id='author' value={data.author} type="text" required className='outline-none border-b text-white bg-transparent border-white p-1'/>
         </label>
-        <label htmlFor="" className='my-1 bg-transparent'>
+        <label htmlFor="" className='my-1'>
             Post <br />
-            <textarea onChange={(e) => handleData(e)} id='body' value={data.body} name="" required cols="30" rows="10" className='outline-none border border-black p-1'></textarea>
+            <textarea onChange={(e) => handleData(e)} id='body' value={data.body} name="" required cols="30" rows="10" className='outline-none border-b text-white bg-transparent border-white p-1 resize-none'></textarea>
         </label>
-        <label htmlFor="" className=' bg-transparent'>
+        <label htmlFor="" className=''>
             Fatured
             <input onChange={(e) => handleData(e)} id='featured' value={data.featured} type="checkbox" name="" className='outline-none border border-black mx-2'/>
         </label>
-        <input type="submit" value="Post" className='px-8 py-1 m-2 cursor-pointer border border-black hover:bg-black hover:text-white'/>
+        <input type="submit" value="Add Post" className='px-5 m-2 cursor-pointer bg-violet-500 text-white rounded text-base'/>
     </form>
   )
 }
